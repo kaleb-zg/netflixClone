@@ -1,5 +1,3 @@
-# Netflix Clone Project Evangadi-Group 3
-
 
 # 🚀 Project done by 
 
@@ -9,13 +7,6 @@
 + > This project is netflix.com website cloning by Evangadi May 2026 students
 
 ```
-
-
-
-## 🎨 Visual Preview
-
-
-![](src/assets/image/ov.png)
 
 ---
 # Netflix Clone — React Web Application
