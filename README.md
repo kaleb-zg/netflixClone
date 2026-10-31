@@ -15,7 +15,7 @@
 ## 🎨 Visual Preview
 
 
-![](images/home/app.png)
+![](src/assets/image/ov.png)
 
 ---
 
