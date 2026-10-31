@@ -1,12 +1,12 @@
 # Netflix Clone Project Evangadi-Group 3
 
 
-# 🚀 Project by 
+# 🚀 Project done by 
 
 ## Kaleb ~  Habiba ~  Berhanu  ~ Erku ~ Yohannes ~ Nigusu ~ Birhan
 
 ```diff
-+ > This project is apple.com website cloning by Evangadi may 2026 students
++ > This project is netflix.com website cloning by Evangadi May 2026 students
 
 ```
 
@@ -23,24 +23,16 @@
 
 - **Header:** 
 - **Footer:** 
-- **First Section banner:** 
-- **Second section banner:**
-- **Third Section banner:** 
-- **Fouth section left:**
-- **Fourth Section right:** 
-- **Fouth section left:**
-- **Fourth Section right:** 
-- **Fouth section left:**
-- **Fourth Section right:** 
+  
 
 
 ## 🛠️ Tech Stack
 
 | Category | Technology |
 | :--- | :--- |
-| **Frontend** | JavaScript, CSS, Boostrap, HTML |
+| **Frontend** | Raect + Vite, CSS, Bootstrap |
 | **Backend** | Node.js, Express|
-| **Database** | MySql |
+| **Database** | TBDB |
 | **DevOps** | GitHub|
 
 ---
