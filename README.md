@@ -41,7 +41,7 @@ Movie and TV metadata is retrieved from **The Movie Database (TMDB) API**. The p
 
 ## Preview
 
-A project preview image is included in the repository:
+
 
 ![Netflix Clone application preview](src/assets/image/ov.png)
 
