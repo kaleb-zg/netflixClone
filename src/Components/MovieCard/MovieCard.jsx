@@ -1,76 +1,77 @@
 import React from "react";
+import styles from "../../Components/MovieCard/MovieCard.module.css";
 import { FaCirclePlay } from "react-icons/fa6";
 import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
-import Styles from "./MovieCard.module.css";
 
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500";
 
 function MovieCard({ movie }) {
-  let gebres = ["Adventure", "Action", "Triller"];
-  console.log(movie)
-
+  let genres = ["Adventure", "Action", "Thriller"];
   return (
-    <div className={Styles.cardWrapper}>
-      {/* poster image  */}
+    <div className={styles.cardWrapper}>
+      {/* poster image */}
       <img
-        className={Styles.poster}
-        src={`${IMAGE_BASE}${movie?.poster_path}`}
-        alt="poster-image"
+        className={styles.poster}
+        src={
+          movie?.poster_path
+            ? `${IMAGE_BASE}${movie.poster_path}`
+            : "/placeholder.png"
+        }
+        alt="poster image"
       />
-
       {/* hover card */}
-
-      <div className={Styles.hoverCard}>
-        {/* img  */}
+      <div className={styles.hoverCard}>
+        {/* image */}
         <img
-          className={Styles.hoverImage}
-          src={`${IMAGE_BASE}${movie?.poster_path}`}
-          alt="hover-image"
+          className={styles.hoverImage}
+          src={
+            movie?.poster_path
+              ? `${IMAGE_BASE}${movie.poster_path}`
+              : "/placeholder.png"
+          }
+          alt="hover image"
         />
-
         {/* badge */}
-        <div className={Styles.badge}>Recently added</div>
-
+        <div className={styles.badge}>Recently added</div>
         {/* button row */}
-        <div className={Styles.buttonsRow}>
+        <div className={styles.buttonsRow}>
           <FaCirclePlay
-            className={Styles.circleButton}
+            className={styles.circleButton}
             color="white"
             size={40}
           />
           <BsPlusCircle
-            className={Styles.circleButton}
+            className={styles.circleButton}
             color="white"
             size={40}
           />
           <GoCheckCircleFill
-            className={Styles.circleButton}
+            className={styles.circleButton}
             color="white"
             size={40}
           />
           <IoIosArrowDropdownCircle
-            className={Styles.circleButtonSmall}
+            className={styles.circleButtonSmall}
             color="white"
             size={40}
           />
         </div>
-
-        {/* metadata row */}
-        <div className={Styles.metaRow}>
-          <span className={Styles.tag}>U/A 16+</span>
-          <span className={Styles.tag}> Movie</span>
-          <span className={Styles.tag}>HD</span>
+        {/* meta data */}
+        <div className={styles.metaRow}>
+          <span className={styles.tag}>U/A 16+</span>
+          <span className={styles.tag}>Movie</span>
+          <span className={styles.tag}>HD</span>
         </div>
         {/* genres */}
-        <div className={Styles.gebres}>
-          {gebres?.map((g, index) => {
+        <div className={styles.genres}>
+          {genres?.map((g, index) => {
             return (
-              <span>
+              <span key={index}>
                 {g}
-                {index < gebres.length - 1 && (
-                  <span className={Styles.dot}>•</span>
+                {index < genres.length - 1 && (
+                  <span className={styles.dot}> •</span>
                 )}
               </span>
             );
