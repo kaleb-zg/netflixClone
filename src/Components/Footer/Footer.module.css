@@ -27,7 +27,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .socialIcons a:hover {
@@ -66,6 +68,27 @@
 /* =========================
    Copyright
 ========================= */
+.endLink {
+  display: inline-flexbox; 
+  position: fixed;
+  border-radius: 10px;
+  bottom: 15px;
+  right: 50px;
+  max-width: 2050px;
+  max-height: 80px;
+  
+}
+.power {
+  background: none;
+  margin-top: 55px;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  text-align: end;
+color: aquamarine;
+border-radius: 8px;
+
+}
 
 .copyright {
   margin-top: 32px;

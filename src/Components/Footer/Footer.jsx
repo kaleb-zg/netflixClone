@@ -1,36 +1,18 @@
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 import styles from "./Footer.module.css";
 
 function Footer() {
   const footerColumns = [
-    [
-      "Audio Description",
-      "Investor Relations",
-      "Legal Notices",
-    ],
-    [
-      "Help Centre",
-      "Jobs",
-      "Cookie Preferences",
-    ],
-    [
-      "Gift Cards",
-      "Terms of Use",
-      "Corporate Information",
-    ],
-    [
-      "Media Centre",
-      "Privacy",
-      "Contact Us",
-    ],
+    ["Audio Description", "Investor Relations", "Legal Notices"],
+    ["Help Centre", "Jobs", "Cookie Preferences"],
+    ["Gift Cards", "Terms of Use", "Corporate Information"],
+    ["Media Centre", "Privacy", "Contact Us"],
   ];
-
+  
+  const handleClick = () => {
+   alert("Welcome to Netflix");
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -67,12 +49,21 @@ function Footer() {
               ))}
             </div>
           ))}
+          <div className={styles.endLink}>
+            <div>
+              <button className={styles.power} onClick={handleClick}>
+                Powered by Netflify
+              </button>
+              <div>
+                <h2>hello</h2>
+              </div>
+            </div>
+            <div></div>
+          </div>
         </div>
 
         {/* Copyright */}
-        <p className={styles.copyright}>
-          © 1997–2026 Netflix, Inc.
-        </p>
+        <p className={styles.copyright}>© 1997–2026 Netflix, Inc.</p>
       </div>
     </footer>
   );
