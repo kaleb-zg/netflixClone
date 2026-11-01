@@ -17,9 +17,9 @@ function DisplayRow() {
     documentaries: [],
   });
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchMovies();
-  },[])
+  }, []);
   const fetchMovies = async () => {
     try {
       const [
@@ -70,3 +70,10 @@ function DisplayRow() {
 }
 
 export default DisplayRow;
+
+
+
+
+
+
+

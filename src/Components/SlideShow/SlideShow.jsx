@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 function SlideShow({ title, movies }) {
-
   return (
     <div>
       <h2 className={Styles.title}> {title}</h2>
