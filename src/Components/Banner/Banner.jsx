@@ -1,9 +1,10 @@
+
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/image/logo.png";
+import requests from "../../Utility/requestUrls";
 import { Play, Info, CloudHail } from "lucide-react";
 import Styles from "./Banner.module.css";
+import logo from "../../assets/image/logo.png";
 import { movieInstance } from "../../Utility/MovieInstance";
-import requests from "../../Utility/requestUrls";
 import { BsGear } from "react-icons/bs";
 const BANNER_BASE = "https://image.tmdb.org/t/p/original/";
 
