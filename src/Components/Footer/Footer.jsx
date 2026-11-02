@@ -1,72 +1,75 @@
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-
+import { SiNetlify } from "react-icons/si";
+// import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
+// Import social media icons
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+
 function Footer() {
-  const footerColumns = [
+  // Social media icons
+  const socialIcons = [
+    { icon: <FaFacebookF />, link: "https://www.facebook.com/" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/" },
+    { icon: <FaTwitter />, link: "https://twitter.com/" },
+    { icon: <FaYoutube />, link: "https://www.youtube.com/" },
+  ];
+
+  // Footer links arranged in four columns
+  const footerLinks = [
     ["Audio Description", "Investor Relations", "Legal Notices"],
     ["Help Centre", "Jobs", "Cookie Preferences"],
     ["Gift Cards", "Terms of Use", "Corporate Information"],
     ["Media Centre", "Privacy", "Contact Us"],
   ];
-  
   const handleClick = () => {
-   alert("Welcome to Netflix");
+    alert("Welcome to Netflix");
   };
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Social Media Icons */}
+        {/* Social media icons */}
         <div className={styles.socialIcons}>
-          <a href="#facebook" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-
-          <a href="#instagram" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-
-          <a href="#twitter" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-
-          <a href="#youtube" aria-label="YouTube">
-            <FaYoutube />
-          </a>
-        </div>
-
-        {/* Footer Links */}
-        <div className={styles.linksContainer}>
-          {footerColumns.map((column, index) => (
-            <div className={styles.column} key={index}>
-              {column.map((link) => (
-                <a
-                  href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                  key={link}
-                >
-                  {link}
-                </a>
-              ))}
-            </div>
+          {socialIcons.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Social media ${index + 1}`}
+            >
+              {item.icon}
+            </a>
           ))}
-          <div className={styles.endLink}>
-            <div>
-              <button className={styles.power} onClick={handleClick}>
-                Powered by Netflify
-              </button>
-              <div>
-                <h2>hello</h2>
-              </div>
-            </div>
-            <div></div>
-          </div>
         </div>
 
-        {/* Copyright */}
-        <p className={styles.copyright}>© 1997–2026 Netflix, Inc.</p>
+        {/* Footer links in four columns */}
+        <div className={styles.footerLinks}>
+          {footerLinks.map((column, index) => (
+            <ul key={index}>
+              {column.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a href="#">{link}</a>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+        <div className={styles.footerNetlify}>
+          <button onClick={handleClick}>
+            <a href="https://www.netlify.com" className={styles.netlifyBadge}>
+              <SiNetlify className={styles.netlifyIcon} />
+              <span>
+                Powered by <strong>Netlify</strong>
+              </span>
+            </a>
+          </button>
+        </div>
+        {/* Copyright information */}
+        <p className={styles.copyright}>© 1997-2026 Netflix, Inc.</p>
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
